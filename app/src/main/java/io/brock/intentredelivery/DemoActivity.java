@@ -40,6 +40,8 @@ public class DemoActivity extends AppCompatActivity {
 
     public void startIntentService() {
         Intent intent = new Intent(this, RedeliveryService.class);
+        intent.putExtra("string_field", "data");
+        intent.putExtra("boolean_field", true);
         startService(intent);
     }
 
